@@ -13,13 +13,13 @@ public abstract class AterioivaOtus {
     }
 
     public void syˆ(){
-        System.out.println("Kyll√§p√§ ruoka maistuukin hyv√§lt√§");
+        System.out.println("Kyll‰p‰ ruoka maistuukin hyv‰lt‰");
     }
 
 
     public void juo(){
         if (juoma == null)
             juoma = createJuoma();
-        System.out.println("Aterian j√§lkeen " + juoma + " tekee ter√§√§");
+        System.out.println("Aterian j‰lkeen " + juoma + " tekee ter‰‰");
     }
 }
