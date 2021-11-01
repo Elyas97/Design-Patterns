@@ -1,5 +1,5 @@
+package Tehtävä1FactoryMethod;
 
-package factorymethod;
 
 public interface Ruoka {
 

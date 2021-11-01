@@ -1,4 +1,4 @@
-package factorymethod;
+package Teht‰v‰1FactoryMethod;
 
 public abstract class AterioivaOtus {
 
@@ -8,11 +8,11 @@ public abstract class AterioivaOtus {
 
 
     public void aterioi(){
-        sy√∂();
+        syˆ();
         juo();
     }
 
-    public void sy√∂(){
+    public void syˆ(){
         System.out.println("Kyll√§p√§ ruoka maistuukin hyv√§lt√§");
     }
 

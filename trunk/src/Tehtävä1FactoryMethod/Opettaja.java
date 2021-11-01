@@ -1,4 +1,4 @@
-package factorymethod;
+package Tehtävä1FactoryMethod;
 
 public class Opettaja extends AterioivaOtus {
 
