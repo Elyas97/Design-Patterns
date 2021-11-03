@@ -1,11 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Emolevy implements Laiteosa {
+public class Kotelo implements Laiteosa {
+
 	private double osaHinta;
 	private double kokoHinta;
 	List<Laiteosa> osatLista=new ArrayList<>();
-	public Emolevy(double hinta) {
+	public Kotelo(double hinta) {
 		this.osaHinta=hinta;
 	}
 	@Override
@@ -48,5 +49,6 @@ public class Emolevy implements Laiteosa {
 		kokoHinta=getKaikkiHinta();
 		return kokoHinta;
 	}
+
 
 }
