@@ -1,5 +1,13 @@
 
 public class BossFactory extends AbstractFactory {
+	private BossFactory() {};
+	private static BossFactory INSTANCE=null;
+	public static synchronized BossFactory getInstance() {
+		if(INSTANCE==null) {
+			INSTANCE= new BossFactory();
+		}
+		return INSTANCE;
+	}
 
 	@Override
 	public Farmarit createFarmari() {

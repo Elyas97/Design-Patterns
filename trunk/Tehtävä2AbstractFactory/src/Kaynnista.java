@@ -2,9 +2,9 @@
 public class Kaynnista {
 
 	public static void main(String[] args) {
-		AbstractFactory insinööri=new BossFactory();
+		AbstractFactory insinööri=BossFactory.getInstance();
 		insinööri.luettele();
-		AbstractFactory jasper=new AdidasFactory();
+		AbstractFactory jasper= AdidasFactory.getInstance();
 		jasper.luettele();
 		
 
