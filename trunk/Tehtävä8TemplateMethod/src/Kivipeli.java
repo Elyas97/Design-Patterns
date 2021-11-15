@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Kivipeli extends Game {
-	boolean pelaa;
+	boolean eipelaa;
 	
 	Scanner scan;
 	String valinta;
@@ -10,7 +10,7 @@ public class Kivipeli extends Game {
 	int tietokonepiste;
 	@Override
 	void initializeGame() {
-		pelaa=false;
+		eipelaa=false;
 		scan=new Scanner(System.in);
 		
 }
@@ -28,10 +28,10 @@ public class Kivipeli extends Game {
 		valinta=scan.nextLine();
 		
 		if(valinta.equalsIgnoreCase("quit")){
-			pelaa=true;
+			eipelaa=true;
 			return;
 		} else if(valinta.equalsIgnoreCase("rock")==false && valinta.equalsIgnoreCase("paper")==false && valinta.equalsIgnoreCase("scissors")==false) {
-			System.out.println("Kirjoita uudestaan " + valinta.equalsIgnoreCase("rock"));
+			System.out.println("Kirjoita uudestaan ");
 			return;
 		}
 		if(valinta.equalsIgnoreCase(konevalinta)) {
@@ -51,7 +51,7 @@ public class Kivipeli extends Game {
 
 	@Override
 	boolean endOfGame() {
-		if(pelaa==false) {
+		if(eipelaa==false) {
 			return false;
 		}else {
 		return true;
