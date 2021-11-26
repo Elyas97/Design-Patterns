@@ -1,15 +1,17 @@
 
 public class Charmander implements PokemonState {
 	PokemonContext t;
+	PäätösVisitor vis;
 	public Charmander(PokemonContext t) {
 		this.t=t;
+		vis=new PäätösVisitor(t);
 	}
 
 	@Override
 	public void juokse() {
 		System.out.println(this.getClass().getName()+ " Juoksee");
 		t.lisääPiste(1);
-		if(t.getPisteet()>5) {
+		if(vis.visit(this)==true) {
 			System.out.println("Charmander kehittyi Charmeleoniksi");
 			t.vaihdaState(t.getCharmeleon());
 		}
@@ -20,7 +22,7 @@ public class Charmander implements PokemonState {
 	public void lennä() {
 		System.out.println(this.getClass().getName()+ " ei osaa lentää");
 		t.lisääPiste(1);
-		if(t.getPisteet()>5) {
+		if(vis.visit(this)==true) {
 			System.out.println("Charmander kehittyi Charmeleoniksi");
 			t.vaihdaState(t.getCharmeleon());
 		}
@@ -31,7 +33,7 @@ public class Charmander implements PokemonState {
 	public void hyökkää() {
 		System.out.println(this.getClass().getName()+ " hyökkää");
 		t.lisääPiste(1);
-		if(t.getPisteet()>5) {
+		if(vis.visit(this)==true) {
 			System.out.println("Charmander kehittyi Charmeleoniksi");
 			t.vaihdaState(t.getCharmeleon());
 		}
